@@ -20,7 +20,11 @@ import {
   MenuItem,
   MenuList,
   useColorModeValue,
+  Image
 } from "@chakra-ui/react";
+
+import BG from "./assets/bg.jpg";
+import ProfilePic from "./assets/avatar-min.png";
 
 function App() {
   return (
@@ -31,8 +35,7 @@ function App() {
 
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
-              <Button >
-              </Button>
+              <Button></Button>
 
               <Menu>
                 <MenuButton
@@ -70,7 +73,18 @@ function App() {
           </Flex>
         </Flex>
       </Box>
-      <Box bg="blackAlpha.400" padding="4"></Box>
+      <Box padding="4" height="90vh" bg="white" bgSize="contain">
+        <Center h="90vh">
+          <Flex flexDirection="column">\
+          <Image src={ProfilePic} />
+            <Heading textAlign="center" >Hey, I'm Cody Stine</Heading>
+            <Text textAlign="center" fontSize="2xl">
+              Fullstack developer focused on bringing ideas to life.
+              No project is too big or small.
+            </Text>
+          </Flex>
+        </Center>
+      </Box>
     </>
 
     // <Card maxW="sm">
