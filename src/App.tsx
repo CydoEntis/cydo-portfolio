@@ -26,11 +26,13 @@ import {
   Grid,
 } from "@chakra-ui/react";
 
-import BG from "./assets/bg.svg";
-import ProfilePic from "./assets/avatar-min.png";
-import ProjectCard from "./components/ProjectCard";
+import ProjectCard from "./components/Work";
 import Tools from "./components/Tools";
 import AboutText from "./components/AboutText";
+import AboutMe from "./features/about/AboutMe";
+import HeroImage from "./components/HeroImage";
+import Hero from "./features/hero/Hero";
+import Works from "./features/works/Works";
 
 function App() {
   return (
@@ -84,45 +86,9 @@ function App() {
           </Flex>
         </Flex>
       </Box>
-      <Box height="90vh" backgroundImage={BG} bgSize="contain">
-        <Center h="90vh">
-          <Flex
-            flexDirection="column"
-            w="100%"
-            h="100%"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Image
-              borderRadius="100%"
-              src={ProfilePic}
-              width="350px"
-              marginBottom="2rem"
-              margin="0 auto"
-            />
-            <Heading textAlign="center" color="white">
-              Hey, I'm Cody Stine
-            </Heading>
-            <Text color="white" textAlign="center" fontSize="2xl">
-              Fullstack developer focused on bringing ideas to life. No project
-              is too big or small.
-            </Text>
-          </Flex>
-        </Center>
-      </Box>
-
-      <Box border="2px solid orange" w="100%" p={5}>
-        <Center>
-          <Heading>About Me</Heading>
-        </Center>
-        <Grid templateColumns="repeat(2, 1fr)" gap={6} p={5}>
-          <AboutText />
-          <Tools />
-        </Grid>
-      </Box>
-      <Box>
-        <ProjectCard imageUrl="" title="" description=""/>
-      </Box>
+      <Hero />
+      <AboutMe />
+      <Works />
     </>
 
     // <Card maxW="sm">

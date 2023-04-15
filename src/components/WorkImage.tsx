@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = { imageUrl: string };
 
-function ProjectImage({ imageUrl }: Props) {
+function WorkImage({ imageUrl }: Props) {
   return (
     <Box w="50%">
       <Image borderRadius=".8rem" src={imageUrl} />
@@ -11,4 +11,4 @@ function ProjectImage({ imageUrl }: Props) {
   );
 }
 
-export default ProjectImage;
+export default WorkImage;
