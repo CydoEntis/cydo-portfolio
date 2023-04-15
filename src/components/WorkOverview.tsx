@@ -1,19 +1,20 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import React from "react";
+import ContentContainer from "./ContentContainer";
+import Subheading from "./Subheading";
 
 type Props = {
   title: string;
   description: string;
 };
 
-function WorkOverview({title, description}: Props) {
+function WorkOverview({ title, description }: Props) {
   return (
-    <Box w="50%">
-      <Heading>{title}</Heading>
-      <Text>
-        {description}
-      </Text>
-    </Box>
+    <ContentContainer>
+      <Subheading text={title} />
+      <Text fontSize="2xl">{description}</Text>
+      <Button>Learn More</Button>
+    </ContentContainer>
   );
 }
 

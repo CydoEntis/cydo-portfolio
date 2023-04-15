@@ -2,6 +2,7 @@ import { Box, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import WorkImage from "./WorkImage";
 import WorkOverview from "./WorkOverview";
+import ContentWrapper from "./ContentWrapper";
 
 type Props = {
   imageUrl: string;
@@ -11,12 +12,12 @@ type Props = {
 
 function Work({ imageUrl, title, description }: Props) {
   return (
-    <Box p={5}>
-      <Flex direction="row">
+    <ContentWrapper>
+      <Flex direction="row" justifyContent="center">
         <WorkImage imageUrl={imageUrl} />
         <WorkOverview title={title} description={description} />
       </Flex>
-    </Box>
+    </ContentWrapper>
   );
 }
 

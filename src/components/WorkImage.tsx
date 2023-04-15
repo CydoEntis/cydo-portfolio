@@ -1,13 +1,14 @@
 import { Box, Image } from "@chakra-ui/react";
 import React from "react";
+import ContentContainer from "./ContentContainer";
 
 type Props = { imageUrl: string };
 
 function WorkImage({ imageUrl }: Props) {
   return (
-    <Box w="50%">
+    <ContentContainer>
       <Image borderRadius=".8rem" src={imageUrl} />
-    </Box>
+    </ContentContainer>
   );
 }
 

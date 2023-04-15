@@ -1,21 +1,32 @@
-import { Badge, Box, Center, Flex, Grid, Heading, Tag } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Center,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Tag,
+} from "@chakra-ui/react";
 import React from "react";
 import Tools from "../../components/Tools";
 import AboutText from "../../components/AboutText";
+import ContentWrapper from "../../components/ContentWrapper";
+import SectionHeading from "../../components/SectionHeading";
 
 type Props = {};
 
 function AboutMe({}: Props) {
   return (
-    <Box py={20} px={5} bg="#FAFBFB">
-        <Flex direction="column" justifyContent="center" alignItems="center">
-          <Heading textTransform="uppercase">About Me</Heading>
-          <Badge my={5} bg="#B7FE00" h="6px" w="30px" borderRadius=".8rem"></Badge>
+    <Box h="75vh" py={5} bg="#FAFBFB">
+      <ContentWrapper>
+        <SectionHeading text="about me"/>
+
+        <Flex w="100%" justifyContent="center">
+          <AboutText />
+          <Tools />
         </Flex>
-      <Grid templateColumns="repeat(2, 1fr)" gap={6} p={5}>
-        <AboutText />
-        <Tools />
-      </Grid>
+        </ContentWrapper>
     </Box>
   );
 }

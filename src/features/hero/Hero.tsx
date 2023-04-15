@@ -3,6 +3,7 @@ import React from "react";
 import HeroImage from "../../components/HeroImage";
 import HeroText from "../../components/HeroText";
 import BG from "../../assets/bg.svg";
+import CustomButton from "../../components/CustomButton";
 
 type Props = {};
 
@@ -13,8 +14,8 @@ function Hero({}: Props) {
         <HeroImage />
         <HeroText />
         <Stack p={5} gap="1rem" direction="row">
-            <Button>Projects</Button>
-            <Button>Contact Me</Button>
+            <CustomButton text="My Work" />
+            <CustomButton text="Contact" />
         </Stack>
       </Flex>
     </Box>

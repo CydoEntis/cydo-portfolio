@@ -1,5 +1,7 @@
-import { Box, GridItem, Tag, Wrap } from "@chakra-ui/react";
+import { Box, GridItem, Heading, Tag, Wrap } from "@chakra-ui/react";
 import React from "react";
+import Subheading from "./Subheading";
+import ContentContainer from "./ContentContainer";
 
 const tools = [
   {
@@ -76,7 +78,8 @@ type Props = {};
 
 function Tools({}: Props) {
   return (
-    <GridItem p={10}>
+    <ContentContainer>
+      <Subheading text="My tools" />
       <Wrap spacing="12px">
         {tools.map((tool) => (
           <Tag p={5} key={tool.id}>
@@ -84,7 +87,7 @@ function Tools({}: Props) {
           </Tag>
         ))}
       </Wrap>
-    </GridItem>
+    </ContentContainer>
   );
 }
 
