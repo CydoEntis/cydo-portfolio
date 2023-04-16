@@ -29,50 +29,23 @@ function App() {
   return (
     <>
       <Box
-        bg={useColorModeValue("gray.100", "gray.900")}
+        boxShadow="0 10px 100px rgba(0,0,0,.1)"
+        bg={useColorModeValue("white", "gray.900")}
         px={4}
         position="fixed"
         w="100%"
+        zIndex="99"
       >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>Logo</Box>
+        <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
+          <Box>CS</Box>
 
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
-              <Button></Button>
+              <Button>Home</Button>
+              <Button>About Me</Button>
+              <Button>My Work</Button>
+              <Button>Contact Me</Button>
 
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Avatar
-                    size={"sm"}
-                    src={"https://avatars.dicebear.com/api/male/username.svg"}
-                  />
-                </MenuButton>
-                <MenuList alignItems={"center"}>
-                  <br />
-                  <Center>
-                    <Avatar
-                      size={"2xl"}
-                      src={"https://avatars.dicebear.com/api/male/username.svg"}
-                    />
-                  </Center>
-                  <br />
-                  <Center>
-                    <p>Username</p>
-                  </Center>
-                  <br />
-                  <MenuDivider />
-                  <MenuItem>Your Servers</MenuItem>
-                  <MenuItem>Account Settings</MenuItem>
-                  <MenuItem>Logout</MenuItem>
-                </MenuList>
-              </Menu>
             </Stack>
           </Flex>
         </Flex>
