@@ -6,13 +6,27 @@ type Props = {};
 function HeroText({}: Props) {
   return (
     <>
-      <Heading p={[2, 5, 8, 10]} size={["2xl", "2xl", "2xl", "3xl"]} textTransform="uppercase" textAlign="center" variant={{base: "base"}}>
+      <Heading
+        p={[2, 5, 8, 10]}
+        size={["2xl", "2xl", "2xl", "3xl"]}
+        textTransform="uppercase"
+        textAlign="center"
+        variant={{ base: "base" }}
+      >
         Hey, I'm Cody Stine
       </Heading>
-      <Text color="#333" textAlign="center" fontSize={["lg", "xl", "xl", "2xl"]} variant={{base: "base"}}>
+      <Text
+        textAlign="center"
+        fontSize={["lg", "xl", "xl", "2xl"]}
+        variant={{ base: "base" }}
+      >
         A Fullstack developer focused on bringing ideas to life.
       </Text>
-      <Text color="#333" textAlign="center" fontSize={["lg", "xl", "xl", "2xl"]} variant={{base: "base"}}>
+      <Text
+        textAlign="center"
+        fontSize={["lg", "xl", "xl", "2xl"]}
+        variant={{ base: "base" }}
+      >
         No project is too big or small.
       </Text>
     </>

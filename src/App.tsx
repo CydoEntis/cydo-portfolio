@@ -1,43 +1,39 @@
 import "./App.css";
 import {
-
   Stack,
-
   Button,
-
   Box,
-  Avatar,
-  Center,
   Flex,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList,
   useColorModeValue,
-  extendTheme,
-
+  Switch,
+  useColorMode,
+  Heading,
 } from "@chakra-ui/react";
 
 import AboutMe from "./features/about/AboutMe";
 
 import Hero from "./features/hero/Hero";
 import Works from "./features/works/Works";
-
+import { FaMoon, FaSun } from "react-icons/fa";
+import { useState } from "react";
 
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <>
       <Box
         boxShadow="0 10px 100px rgba(0,0,0,.1)"
-        bg={useColorModeValue("white", "gray.900")}
+        bg={useColorModeValue("#fff", "#121212")}
         px={4}
         position="fixed"
         w="100%"
         zIndex="99"
       >
         <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>CS</Box>
+          <Box>
+            <Heading textTransform='uppercase' size="lg" letterSpacing={5}>Cody Stine</Heading>
+          </Box>
 
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
@@ -45,7 +41,9 @@ function App() {
               <Button>About Me</Button>
               <Button>My Work</Button>
               <Button>Contact Me</Button>
-
+              <Button onClick={toggleColorMode}>
+                {colorMode === "light" ? <FaMoon /> : <FaSun />}
+              </Button>
             </Stack>
           </Flex>
         </Flex>

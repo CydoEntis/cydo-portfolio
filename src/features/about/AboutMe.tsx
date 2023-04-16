@@ -7,6 +7,7 @@ import {
   Grid,
   Heading,
   Tag,
+  useColorModeValue
 } from "@chakra-ui/react";
 import React from "react";
 import Tools from "../../components/Tools";
@@ -19,7 +20,7 @@ type Props = {};
 
 function AboutMe({}: Props) {
   return (
-    <Box minHeight="70vh" bg="#FAFBFB" w="100%">
+    <Box minHeight="70vh" w="100%" bg={useColorModeValue("#fff", "#141414")}>
     <ContentWrapper>
       <SectionHeading text="about me" />
       <FlexWrapper>
