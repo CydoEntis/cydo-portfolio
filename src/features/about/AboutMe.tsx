@@ -18,11 +18,11 @@ type Props = {};
 
 function AboutMe({}: Props) {
   return (
-    <Box h="75vh" py={5} bg="#FAFBFB">
+    <Box py={5} bg="#FAFBFB">
       <ContentWrapper>
         <SectionHeading text="about me"/>
 
-        <Flex w="100%" justifyContent="center">
+        <Flex w="100%" justifyContent="center" direction={{ base: "row", lg: "column"}} >
           <AboutText />
           <Tools />
         </Flex>

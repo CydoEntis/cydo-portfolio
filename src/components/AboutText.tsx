@@ -2,6 +2,7 @@ import { Box, Button, GridItem, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import Subheading from "./Subheading";
 import ContentContainer from "./ContentContainer";
+import CustomButton from "./CustomButton";
 
 type Props = {};
 
@@ -9,7 +10,7 @@ function AboutText({}: Props) {
   return (
     <ContentContainer>
       <Subheading text="Get to know me!" />
-      <Text fontSize="2xl" lineHeight={10}>
+      <Text fontSize="2xl" lineHeight={10} py={5}>
         I'm a <strong>Full Stack Developer</strong> focused on building
         applications that lead to the success of the overall product. Over my
         years of development I have acquired the <strong>tools</strong> to
@@ -18,9 +19,7 @@ function AboutText({}: Props) {
         if you are interested in working with me. No project is to big or small
         for me to tackle. 🙂
       </Text>
-      <Button my={5} p={8} w="250px" fontSize="2xl" bg="#B7FD00">
-        Contact Me
-      </Button>
+      <CustomButton text="Contact Me" />
     </ContentContainer>
   );
 }

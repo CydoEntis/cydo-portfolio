@@ -8,8 +8,7 @@ type Props = {};
 
 function Works({}: Props) {
   return (
-    <Box p={10} border="2px solid orange">
-      
+    <Box p={10}>
       <ContentWrapper>
         <SectionHeading text="my work"/>
         <WorkList />

@@ -80,9 +80,9 @@ function Tools({}: Props) {
   return (
     <ContentContainer>
       <Subheading text="My tools" />
-      <Wrap spacing="12px">
+      <Wrap spacing="12px" py={5}>
         {tools.map((tool) => (
-          <Tag p={5} key={tool.id}>
+          <Tag p={5} key={tool.id} fontSize="xl" >
             {tool.name}
           </Tag>
         ))}
