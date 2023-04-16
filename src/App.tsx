@@ -8,7 +8,16 @@ import {
   Switch,
   useColorMode,
   Heading,
+  Link,
+  FormControl,
+  FormLabel,
+  Input,
+  Center,
+  HStack,
+  Textarea,
 } from "@chakra-ui/react";
+import BgDark from "./assets/bg-dark.svg";
+import BgLight from "./assets/bg-light.svg";
 
 import AboutMe from "./features/about/AboutMe";
 
@@ -16,6 +25,11 @@ import Hero from "./features/hero/Hero";
 import Works from "./features/works/Works";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useState } from "react";
+import { createBrowserRouter } from "react-router-dom";
+import ContentWrapper from "./components/ContentWrapper";
+import SectionHeading from "./components/SectionHeading";
+import BgWrapper from "./components/BgWrapper";
+import CustomButton from "./components/CustomButton";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -32,15 +46,22 @@ function App() {
       >
         <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
-            <Heading textTransform='uppercase' size="lg" letterSpacing={5}>Cody Stine</Heading>
+            <Heading textTransform="uppercase" size="lg" letterSpacing={5}>
+              Cody Stine
+            </Heading>
           </Box>
 
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
-              <Button>Home</Button>
-              <Button>About Me</Button>
-              <Button>My Work</Button>
-              <Button>Contact Me</Button>
+              <Button>
+                <Link href="#home">Home</Link>
+              </Button>
+              <Button>
+                <Link href="#about">About Me</Link>
+              </Button>
+              <Button>
+                <Link href="#works">My Work</Link>
+              </Button>
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <FaMoon /> : <FaSun />}
               </Button>
@@ -51,6 +72,62 @@ function App() {
       <Hero />
       <AboutMe />
       <Works />
+      <BgWrapper>
+        <ContentWrapper>
+          <SectionHeading text="contact me" />
+          <Stack
+            margin="0 auto"
+            bg={useColorModeValue("#FAFBFB", "#141414")}
+            p="3rem"
+            width="40%"
+            height="3xl"
+            borderRadius=".8rem"
+          >
+            <FormControl>
+              <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Name</FormLabel>
+              <Input
+                placeholder="Enter your name"
+                h={[12, 12, 12, 16]}
+                fontSize={["lg", "xl", "xl", "2xl"]}
+                lineHeight={{
+                  sm: "sm",
+                  md: "md",
+                  lg: "lg",
+                  xl: "lg",
+                  "2xl": "xl",
+                }}
+                focusBorderColor="#B7FD00"
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Email</FormLabel>
+              <Input
+                type="email"
+                placeholder="Enter your name"
+                h={[12, 12, 12, 16]}
+                fontSize={["lg", "xl", "xl", "2xl"]}
+                lineHeight={{
+                  sm: "sm",
+                  md: "md",
+                  lg: "lg",
+                  xl: "lg",
+                  "2xl": "xl",
+                }}
+                focusBorderColor="#B7FD00"
+              />
+            </FormControl>
+            <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Message</FormLabel>
+            <Textarea
+              focusBorderColor="#B7FD00"
+              size="lg"
+              boxSize="sm"
+              resize="none"
+              w="100%"
+            />
+            <CustomButton text="send"/>
+          </Stack>
+        </ContentWrapper>
+      </BgWrapper>
     </>
 
     // <Card maxW="sm">

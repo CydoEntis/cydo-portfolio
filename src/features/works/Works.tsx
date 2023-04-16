@@ -8,10 +8,12 @@ type Props = {};
 
 function Works({}: Props) {
   return (
-    <ContentWrapper>
-      <SectionHeading text="my work" />
-      <WorkList />
-    </ContentWrapper>
+    <Box id="works">
+      <ContentWrapper>
+        <SectionHeading text="my work" />
+        <WorkList />
+      </ContentWrapper>
+    </Box>
   );
 }
 
