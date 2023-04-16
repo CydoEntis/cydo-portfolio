@@ -8,8 +8,8 @@ type Props = {
 function ContentContainer({ children }: Props) {
   return (
     <Box
-      width={["100%", "100%", "100%", "100%"]}
-      p={[2, 5, 5, 10]}
+      width={{ sm: "100%", md: "100%", lg: "100", xl: "90%", "2xl": "50%" }}
+      p={[5, 5, 5, 10]}
     >
       {children}
     </Box>

@@ -1,15 +1,10 @@
 import "./App.css";
 import {
-  Text,
-  Card,
-  CardBody,
+
   Stack,
-  Heading,
-  Divider,
-  CardFooter,
-  ButtonGroup,
+
   Button,
-  Container,
+
   Box,
   Avatar,
   Center,
@@ -20,19 +15,15 @@ import {
   MenuItem,
   MenuList,
   useColorModeValue,
-  Image,
-  Tag,
-  Wrap,
-  Grid,
+  extendTheme,
+
 } from "@chakra-ui/react";
 
-import ProjectCard from "./components/Work";
-import Tools from "./components/Tools";
-import AboutText from "./components/AboutText";
 import AboutMe from "./features/about/AboutMe";
-import HeroImage from "./components/HeroImage";
+
 import Hero from "./features/hero/Hero";
 import Works from "./features/works/Works";
+
 
 function App() {
   return (

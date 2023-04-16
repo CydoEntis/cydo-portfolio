@@ -7,7 +7,7 @@ type Props = { imageUrl: string };
 function WorkImage({ imageUrl }: Props) {
   return (
     <ContentContainer>
-      <Image borderRadius=".8rem" src={imageUrl} />
+      <Image borderRadius=".8rem" minWidth="100%" w="100%" src={imageUrl} />
     </ContentContainer>
   );
 }

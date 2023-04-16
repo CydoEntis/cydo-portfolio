@@ -7,7 +7,10 @@ type Props = {
 
 function ContentWrapper({ children }: Props) {
   return (
-    <Box margin="0 auto" width="100%">
+    <Box
+      margin="0 auto"
+      width={{ sm: "100%", md: "100%", lg: "100", xl: "90%", "2xl": "75%" }}
+    >
       {children}
     </Box>
   );

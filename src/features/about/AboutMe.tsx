@@ -19,6 +19,7 @@ type Props = {};
 
 function AboutMe({}: Props) {
   return (
+    <Box minHeight="70vh" bg="#FAFBFB" w="100%">
     <ContentWrapper>
       <SectionHeading text="about me" />
       <FlexWrapper>
@@ -26,6 +27,8 @@ function AboutMe({}: Props) {
         <Tools />
       </FlexWrapper>
     </ContentWrapper>
+    </Box>
+
   );
 }
 

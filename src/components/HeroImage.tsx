@@ -9,15 +9,13 @@ type Props = {};
 
 function HeroImage({}: Props) {
   return (
-    <Box p={3}>
       <Image
         borderRadius="100%"
         src={ProfilePic}
-        width="250px"
+        maxWidth="250px"
         marginBottom="2rem"
         margin="0 auto"
       />
-    </Box>
   );
 }
 
