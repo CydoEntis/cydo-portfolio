@@ -30,6 +30,7 @@ import ContentWrapper from "./components/ContentWrapper";
 import SectionHeading from "./components/SectionHeading";
 import BgWrapper from "./components/BgWrapper";
 import CustomButton from "./components/CustomButton";
+import ContactForm from "./features/contact/ContactForm";
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -72,62 +73,7 @@ function App() {
       <Hero />
       <AboutMe />
       <Works />
-      <BgWrapper>
-        <ContentWrapper>
-          <SectionHeading text="contact me" />
-          <Stack
-            margin="0 auto"
-            bg={useColorModeValue("#FAFBFB", "#141414")}
-            p="3rem"
-            width="40%"
-            height="3xl"
-            borderRadius=".8rem"
-          >
-            <FormControl>
-              <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Name</FormLabel>
-              <Input
-                placeholder="Enter your name"
-                h={[12, 12, 12, 16]}
-                fontSize={["lg", "xl", "xl", "2xl"]}
-                lineHeight={{
-                  sm: "sm",
-                  md: "md",
-                  lg: "lg",
-                  xl: "lg",
-                  "2xl": "xl",
-                }}
-                focusBorderColor="#B7FD00"
-              />
-            </FormControl>
-            <FormControl>
-              <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Email</FormLabel>
-              <Input
-                type="email"
-                placeholder="Enter your name"
-                h={[12, 12, 12, 16]}
-                fontSize={["lg", "xl", "xl", "2xl"]}
-                lineHeight={{
-                  sm: "sm",
-                  md: "md",
-                  lg: "lg",
-                  xl: "lg",
-                  "2xl": "xl",
-                }}
-                focusBorderColor="#B7FD00"
-              />
-            </FormControl>
-            <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Message</FormLabel>
-            <Textarea
-              focusBorderColor="#B7FD00"
-              size="lg"
-              boxSize="sm"
-              resize="none"
-              w="100%"
-            />
-            <CustomButton text="send"/>
-          </Stack>
-        </ContentWrapper>
-      </BgWrapper>
+      <ContactForm />
     </>
 
     // <Card maxW="sm">
