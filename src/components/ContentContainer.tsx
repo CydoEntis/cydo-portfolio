@@ -7,7 +7,10 @@ type Props = {
 
 function ContentContainer({ children }: Props) {
   return (
-    <Box w={["100%", "100%", "100%", "40%"]} p={10}>
+    <Box
+      width={["100%", "100%", "100%", "100%"]}
+      p={[2, 5, 5, 10]}
+    >
       {children}
     </Box>
   );

@@ -3,6 +3,7 @@ import React from "react";
 import WorkImage from "./WorkImage";
 import WorkOverview from "./WorkOverview";
 import ContentWrapper from "./ContentWrapper";
+import FlexWrapper from "./FlexWrapper";
 
 type Props = {
   imageUrl: string;
@@ -13,10 +14,10 @@ type Props = {
 function Work({ imageUrl, title, description }: Props) {
   return (
     <ContentWrapper>
-      <Flex direction="row" justifyContent="center">
+      <FlexWrapper>
         <WorkImage imageUrl={imageUrl} />
         <WorkOverview title={title} description={description} />
-      </Flex>
+      </FlexWrapper>
     </ContentWrapper>
   );
 }

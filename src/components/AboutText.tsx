@@ -8,9 +8,9 @@ type Props = {};
 
 function AboutText({}: Props) {
   return (
-    <ContentContainer>
+    <ContentContainer >
       <Subheading text="Get to know me!" />
-      <Text fontSize="2xl" lineHeight={10} py={5}>
+      <Text  lineHeight={10} py={5} fontSize={["lg", "xl", "xl", "2xl"]}>
         I'm a <strong>Full Stack Developer</strong> focused on building
         applications that lead to the success of the overall product. Over my
         years of development I have acquired the <strong>tools</strong> to

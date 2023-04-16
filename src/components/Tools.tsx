@@ -82,7 +82,7 @@ function Tools({}: Props) {
       <Subheading text="My tools" />
       <Wrap spacing="12px" py={5}>
         {tools.map((tool) => (
-          <Tag p={5} key={tool.id} fontSize="xl" >
+          <Tag p={5} key={tool.id} fontSize={["sm", "md", "lg", "xl"]}>
             {tool.name}
           </Tag>
         ))}

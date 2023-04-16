@@ -7,7 +7,7 @@ type Props = {
 
 function Subheading({text}: Props) {
   return (
-    <Heading py={5}>{text}</Heading>
+    <Heading py={5} size={["lg", "xl", "xl", "xl"]}>{text}</Heading>
   )
 }
 
