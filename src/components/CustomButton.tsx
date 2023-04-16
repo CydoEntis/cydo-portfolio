@@ -8,7 +8,8 @@ function CustomButton({ text }: Props) {
   return (
     <Button
       textTransform="uppercase"
-      bg="#B7FD00"
+      variant={{base: "base"}}
+      // bg="#B7FD00"
       w={["120px", "125px", "150px", "175px"]}
       py={[6, 6, 6, 7]}
       px={10}

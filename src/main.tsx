@@ -13,7 +13,33 @@ const breakpoints = {
   "2xl": "1536px",
 };
 
-const theme = extendTheme({ breakpoints });
+const theme = extendTheme({
+  breakpoints,
+  components: {
+    Button: {
+      variants: {
+        base: {
+          bg: "#B7FD00",
+          color: "#333",
+        },
+      },
+    },
+    Text: {
+      variants: {
+        base: {
+          color: "#333",
+        },
+      },
+    },
+    Heading: {
+      variants: {
+        base: {
+          color: "#333",
+        },
+      },
+    },
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

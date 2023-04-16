@@ -13,7 +13,13 @@ function SectionHeading({ text }: Props) {
       justifyContent="center"
       alignItems="center"
     >
-      <Heading textTransform="uppercase" size={["xl", "xl", "xl", "2xl"]}>{text}</Heading>
+      <Heading
+        textTransform="uppercase"
+        size={["xl", "xl", "xl", "2xl"]}
+        variant={{ base: "base" }}
+      >
+        {text}
+      </Heading>
       <Badge my={5} bg="#B7FE00" h="6px" w="30px" borderRadius=".8rem"></Badge>
     </Flex>
   );

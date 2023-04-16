@@ -1,14 +1,16 @@
-import { Heading } from '@chakra-ui/react';
-import React from 'react'
+import { Heading } from "@chakra-ui/react";
+import React from "react";
 
 type Props = {
-    text: string;
-}
+  text: string;
+};
 
-function Subheading({text}: Props) {
+function Subheading({ text }: Props) {
   return (
-    <Heading py={5} size={["lg", "xl", "xl", "xl"]}>{text}</Heading>
-  )
+    <Heading py={5} size={["lg", "xl", "xl", "xl"]} variant={{ base: "base" }}>
+      {text}
+    </Heading>
+  );
 }
 
-export default Subheading
+export default Subheading;
