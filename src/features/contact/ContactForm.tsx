@@ -2,6 +2,8 @@ import BgWrapper from "../../components/wrappers/BgWrapper";
 import ContentWrapper from "../../components/wrappers/ContentWrapper";
 import SectionHeading from "../../components/headings/SectionHeading";
 import {
+  Box,
+  Button,
   FormControl,
   FormErrorMessage,
   FormHelperText,
@@ -10,6 +12,7 @@ import {
   Stack,
   Textarea,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
 import DefaultButton from "../../components/buttons/DefaultButton";
 import emailjs from "@emailjs/browser";
@@ -17,6 +20,7 @@ import { ZodType, z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRef, useState } from "react";
+import ToastMessage from "../../components/toast/ToastMessage";
 
 type ContactFormData = {
   name: string;
@@ -26,7 +30,7 @@ type ContactFormData = {
 };
 
 function ContactForm() {
-  const [emailSent, setEmailSent] = useState("");
+  const toast = useToast();
 
   const schema: ZodType<ContactFormData> = z.object({
     name: z.string().min(2).max(50),
@@ -54,12 +58,20 @@ function ContactForm() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          toast({
+            position: "top",
+            duration: 1500,
+            render: () => <ToastMessage message="Email sent sucessfully" />,
+          });
           reset();
         },
         (error) => {
-          console.log("Email failed");
-          console.log(error.text);
+          toast({
+            position: "top",
+            duration: 1500,
+            status: "error",
+            title: error.text
+          });
         }
       );
   };
