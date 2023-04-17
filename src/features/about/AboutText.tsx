@@ -1,8 +1,8 @@
 import { Box, Button, GridItem, Heading, Text } from "@chakra-ui/react";
 import React from "react";
-import Subheading from "./Subheading";
-import ContentContainer from "./ContentContainer";
-import CustomButton from "./CustomButton";
+import Subheading from "../../components/headings/Subheading";
+import ContentContainer from "../../components/containers/ContentContainer";
+import PageLinkButton from "../../components/buttons/PageLinkButton";
 
 type Props = {};
 
@@ -19,7 +19,7 @@ function AboutText({}: Props) {
         if you are interested in working with me. No project is to big or small
         for me to tackle. 🙂
       </Text>
-      <CustomButton text="Contact Me" />
+      <PageLinkButton text="Contact Me" link="#contact" />
     </ContentContainer>
   );
 }

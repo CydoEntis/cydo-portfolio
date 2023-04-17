@@ -26,10 +26,10 @@ import Works from "./features/works/Works";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useState } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import ContentWrapper from "./components/ContentWrapper";
-import SectionHeading from "./components/SectionHeading";
-import BgWrapper from "./components/BgWrapper";
-import CustomButton from "./components/CustomButton";
+import ContentWrapper from "./components/wrappers/ContentWrapper";
+import SectionHeading from "./components/headings/SectionHeading";
+import BgWrapper from "./components/wrappers/BgWrapper";
+import CustomButton from "./components/buttons/PageLinkButton";
 import ContactForm from "./features/contact/ContactForm";
 import Nav from "./features/navigation/Nav";
 

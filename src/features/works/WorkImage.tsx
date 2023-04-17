@@ -1,6 +1,6 @@
 import { Box, Image } from "@chakra-ui/react";
 import React from "react";
-import ContentContainer from "./ContentContainer";
+import ContentContainer from "../../components/containers/ContentContainer";
 
 type Props = { imageUrl: string };
 

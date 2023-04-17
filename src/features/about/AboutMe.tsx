@@ -1,10 +1,10 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import Tools from "../../components/Tools";
-import AboutText from "../../components/AboutText";
-import ContentWrapper from "../../components/ContentWrapper";
-import SectionHeading from "../../components/SectionHeading";
-import FlexWrapper from "../../components/FlexWrapper";
+import Tools from "./Tools";
+import AboutText from "./AboutText";
+import ContentWrapper from "../../components/wrappers/ContentWrapper";
+import SectionHeading from "../../components/headings/SectionHeading";
+import FlexWrapper from "../../components/wrappers/FlexWrapper";
 
 type Props = {};
 

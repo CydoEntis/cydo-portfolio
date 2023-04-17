@@ -1,15 +1,15 @@
 import React from "react";
-import BgWrapper from "../../components/BgWrapper";
-import ContentWrapper from "../../components/ContentWrapper";
-import SectionHeading from "../../components/SectionHeading";
+import BgWrapper from "../../components/wrappers/BgWrapper";
+import ContentWrapper from "../../components/wrappers/ContentWrapper";
+import SectionHeading from "../../components/headings/SectionHeading";
 import {
   FormLabel,
   Stack,
   Textarea,
   useColorModeValue,
 } from "@chakra-ui/react";
-import FormInput from "../../components/FormInput";
-import CustomButton from "../../components/CustomButton";
+import FormInput from "../../components/form/FormInput";
+import DefaultButton from "../../components/buttons/DefaultButton";
 
 type Props = {};
 
@@ -41,7 +41,7 @@ function ContactForm({}: Props) {
             resize="none"
             w="100%"
           />
-          <CustomButton text="send" />
+          <DefaultButton text="send" />
         </Stack>
       </ContentWrapper>
     </BgWrapper>

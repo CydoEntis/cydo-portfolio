@@ -1,8 +1,8 @@
 import { Box, Center, Heading } from "@chakra-ui/react";
 import React from "react";
-import WorkList from "../../components/WorkList";
-import ContentWrapper from "../../components/ContentWrapper";
-import SectionHeading from "../../components/SectionHeading";
+import WorkList from "./WorkList";
+import ContentWrapper from "../../components/wrappers/ContentWrapper";
+import SectionHeading from "../../components/headings/SectionHeading";
 
 type Props = {};
 

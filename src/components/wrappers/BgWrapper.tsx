@@ -1,7 +1,7 @@
 import React from "react";
 
-import BgDark from "../assets/bg-dark.svg";
-import BgLight from "../assets/bg-light.svg";
+import BgDark from "../../assets/bg-dark.svg";
+import BgLight from "../../assets/bg-light.svg";
 import { Box, useColorMode } from "@chakra-ui/react";
 
 type Props = {

@@ -1,7 +1,7 @@
 import { Box, GridItem, Heading, Tag, Wrap } from "@chakra-ui/react";
 import React from "react";
-import Subheading from "./Subheading";
-import ContentContainer from "./ContentContainer";
+import Subheading from "../../components/headings/Subheading";
+import ContentContainer from "../../components/containers/ContentContainer";
 
 const tools = [
   {

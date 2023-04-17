@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import NavList from "../../components/NavList";
-import Logo from "../../components/Logo";
-import NavButton from "../../components/NavButton";
-import ThemeToggler from "../../components/ThemeToggler";
+import Navbar from "./Navbar";
+import NavList from "./NavList";
+import Logo from "../../components/logos/Logo";
+import NavButton from "./NavButton";
+import ThemeToggler from "../../components/theme/ThemeToggler";
 
 type Props = {};
 

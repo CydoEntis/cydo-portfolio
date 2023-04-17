@@ -1,10 +1,10 @@
 import { Flex, Stack } from "@chakra-ui/react";
 import React from "react";
-import HeroImage from "../../components/HeroImage";
-import HeroText from "../../components/HeroText";
-import CustomButton from "../../components/CustomButton";
+import HeroImage from "./HeroImage";
+import HeroText from "./HeroText";
+import PageLinkButton from "../../components/buttons/PageLinkButton";
 
-import BgWrapper from "../../components/BgWrapper";
+import BgWrapper from "../../components/wrappers/BgWrapper";
 
 type Props = {};
 
@@ -21,8 +21,8 @@ function Hero({}: Props) {
         <HeroImage />
         <HeroText />
         <Stack p={5} gap="1rem" direction="row">
-          <CustomButton text="My Work" />
-          <CustomButton text="Contact" />
+          <PageLinkButton text="My Work" link="#work"/>
+          <PageLinkButton text="Contact" link="#contact"/>
         </Stack>
       </Flex>
     </BgWrapper>

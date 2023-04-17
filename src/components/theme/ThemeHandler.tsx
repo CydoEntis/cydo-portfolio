@@ -38,19 +38,6 @@ function ThemeHandler({ cookies, children }: Props) {
     },
     config,
     breakpoints,
-    // components: {
-    //   Button: {
-    //     variants: {
-    //       base: {
-    //         bg: "#B7FD00",
-    //         color: "#333",
-    //       },
-    //       _hover: {
-    //         bg: "#abd43f"
-    //       }
-    //     },
-    //   },
-    // },
   });
 
   const colorModeManager =

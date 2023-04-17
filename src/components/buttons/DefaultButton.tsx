@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Button } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 type Props = {
   text: string;
 };
 
-function CustomButton({ text }: Props) {
+function DefaultButton({ text }: Props) {
   return (
     <Box
       as="button"
@@ -24,4 +24,4 @@ function CustomButton({ text }: Props) {
   );
 }
 
-export default CustomButton;
+export default DefaultButton;
