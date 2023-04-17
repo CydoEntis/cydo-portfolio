@@ -1,9 +1,11 @@
 import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
-type Props = {};
+type Props = {
+    children: React.ReactNode;
+};
 
-function Navbar({}: Props) {
+function Navbar({children}: Props) {
   return (
     <Box
     //   boxShadow="0 10px 100px rgba(0,0,0,.1)"
@@ -14,7 +16,7 @@ function Navbar({}: Props) {
       zIndex="99"
     >
       <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
-
+        {children}
 
 
       </Flex>

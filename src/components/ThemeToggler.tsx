@@ -1,11 +1,17 @@
-import React from 'react'
+import { Button, useColorMode } from "@chakra-ui/react";
+import React from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
-type Props = {}
+type Props = {};
 
 function ThemeToggler({}: Props) {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
-    <div>ThemeToggler</div>
-  )
+    <Button onClick={toggleColorMode}>
+      {colorMode === "light" ? <FaMoon /> : <FaSun />}
+    </Button>
+  );
 }
 
-export default ThemeToggler
+export default ThemeToggler;
