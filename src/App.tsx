@@ -37,39 +37,6 @@ function App() {
 
   return (
     <>
-      <Box
-        boxShadow="0 10px 100px rgba(0,0,0,.1)"
-        bg={useColorModeValue("#fff", "#121212")}
-        px={4}
-        position="fixed"
-        w="100%"
-        zIndex="99"
-      >
-        <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
-          <Box>
-            <Heading textTransform="uppercase" size="lg" letterSpacing={5}>
-              Cody Stine
-            </Heading>
-          </Box>
-
-          <Flex alignItems={"center"}>
-            <Stack direction={"row"} spacing={7}>
-              <Button>
-                <Link href="#home">Home</Link>
-              </Button>
-              <Button>
-                <Link href="#about">About Me</Link>
-              </Button>
-              <Button>
-                <Link href="#works">My Work</Link>
-              </Button>
-              <Button onClick={toggleColorMode}>
-                {colorMode === "light" ? <FaMoon /> : <FaSun />}
-              </Button>
-            </Stack>
-          </Flex>
-        </Flex>
-      </Box>
       <Hero />
       <AboutMe />
       <Works />

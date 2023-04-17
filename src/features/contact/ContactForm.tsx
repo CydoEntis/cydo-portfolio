@@ -2,7 +2,7 @@ import React from "react";
 import BgWrapper from "../../components/BgWrapper";
 import ContentWrapper from "../../components/ContentWrapper";
 import SectionHeading from "../../components/SectionHeading";
-import { Stack, useColorModeValue } from "@chakra-ui/react";
+import { FormLabel, Stack, Textarea, useColorModeValue } from "@chakra-ui/react";
 import FormInput from "../../components/FormInput";
 import CustomButton from "../../components/CustomButton";
 
@@ -28,14 +28,14 @@ function ContactForm({}: Props) {
             type="email"
           />
 
-          {/* <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Message</FormLabel>
+          <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Message</FormLabel>
           <Textarea
             focusBorderColor="#B7FD00"
             size="lg"
             boxSize="sm"
             resize="none"
             w="100%"
-          /> */}
+          />
           <CustomButton text="send" />
         </Stack>
       </ContentWrapper>
