@@ -1,47 +1,167 @@
-import React from "react";
 import BgWrapper from "../../components/wrappers/BgWrapper";
 import ContentWrapper from "../../components/wrappers/ContentWrapper";
 import SectionHeading from "../../components/headings/SectionHeading";
 import {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
   FormLabel,
+  Input,
   Stack,
   Textarea,
   useColorModeValue,
 } from "@chakra-ui/react";
-import FormInput from "../../components/form/FormInput";
 import DefaultButton from "../../components/buttons/DefaultButton";
+import emailjs from "@emailjs/browser";
+import { ZodType, z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useRef, useState } from "react";
 
-type Props = {};
+type ContactFormData = {
+  name: string;
+  email: string;
+  message: string;
+  subject: string;
+};
 
-function ContactForm({}: Props) {
+function ContactForm() {
+  const [emailSent, setEmailSent] = useState("");
+
+  const schema: ZodType<ContactFormData> = z.object({
+    name: z.string().min(2).max(50),
+    email: z.string().email(),
+    subject: z.string().min(3).max(50),
+    message: z.string().min(10).max(200),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(schema),
+  });
+
+  const sendEmail = (data: ContactFormData, e: any) => {
+    emailjs
+      .sendForm(
+        `${import.meta.env.VITE_SERVICE_ID}`,
+        `${import.meta.env.VITE_TEMPLATE_ID}`,
+        e.target,
+        `${import.meta.env.VITE_PUBLIC_KEY}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          reset();
+        },
+        (error) => {
+          console.log("Email failed");
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <BgWrapper>
       <ContentWrapper>
         <SectionHeading text="contact me" />
         <Stack
+          as="form"
           id="contact"
           bg={useColorModeValue("#FAFBFB", "#141414")}
           p="3rem"
-          height="3xl"
           borderRadius=".8rem"
           gap={3}
+          onSubmit={handleSubmit(sendEmail)}
         >
-          <FormInput label="Name" placeholder="Enter your name" type="text" />
-          <FormInput
-            label="Email"
-            placeholder="Enter your email"
-            type="email"
-          />
+          <FormControl isInvalid={!!errors.name}>
+            <FormLabel htmlFor="name" fontSize={["lg", "xl", "xl", "2xl"]}>
+              Name
+            </FormLabel>
+            <Input
+              id="name"
+              type="text"
+              placeholder="Enter your name"
+              h={[12, 12, 12, 16]}
+              fontSize={["lg", "xl", "xl", "2xl"]}
+              lineHeight={{
+                sm: "sm",
+                md: "md",
+                lg: "lg",
+                xl: "lg",
+                "2xl": "xl",
+              }}
+              focusBorderColor="#B7FD00"
+              {...register("name")}
+            />
 
-          <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Message</FormLabel>
-          <Textarea
-            focusBorderColor="#B7FD00"
-            size="lg"
-            boxSize="sm"
-            resize="none"
-            w="100%"
-          />
-          <DefaultButton text="send" />
+            <FormErrorMessage fontSize={["sm", "md", "lg", "xl"]}>
+              {errors.name && errors.name.message}
+            </FormErrorMessage>
+          </FormControl>
+          <FormControl isInvalid={!!errors.email}>
+            <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Email</FormLabel>
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              h={[12, 12, 12, 16]}
+              fontSize={["lg", "xl", "xl", "2xl"]}
+              lineHeight={{
+                sm: "sm",
+                md: "md",
+                lg: "lg",
+                xl: "lg",
+                "2xl": "xl",
+              }}
+              focusBorderColor="#B7FD00"
+              {...register("email")}
+            />
+            <FormErrorMessage fontSize={["sm", "md", "lg", "xl"]}>
+              {errors.email && errors.email.message}
+            </FormErrorMessage>
+          </FormControl>
+
+          <FormControl isInvalid={!!errors.subject}>
+            <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Subject</FormLabel>
+            <Input
+              type="text"
+              placeholder="Enter your subject"
+              h={[12, 12, 12, 16]}
+              fontSize={["lg", "xl", "xl", "2xl"]}
+              lineHeight={{
+                sm: "sm",
+                md: "md",
+                lg: "lg",
+                xl: "lg",
+                "2xl": "xl",
+              }}
+              focusBorderColor="#B7FD00"
+              {...register("subject")}
+            />
+            <FormErrorMessage fontSize={["sm", "md", "lg", "xl"]}>
+              {errors.email && errors.email.message}
+            </FormErrorMessage>
+          </FormControl>
+
+          <FormControl isInvalid={!!errors.message}>
+            <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Message</FormLabel>
+            <Textarea
+              fontSize={["lg", "xl", "xl", "2xl"]}
+              focusBorderColor="#B7FD00"
+              size="lg"
+              boxSize="sm"
+              resize="none"
+              w="100%"
+              {...register("message")}
+            />
+            <FormErrorMessage fontSize={["sm", "md", "lg", "xl"]}>
+              {errors.message && errors.message.message}
+            </FormErrorMessage>
+          </FormControl>
+          <DefaultButton text="send" type="submit" />
         </Stack>
       </ContentWrapper>
     </BgWrapper>

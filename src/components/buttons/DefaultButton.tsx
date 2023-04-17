@@ -2,9 +2,10 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 type Props = {
   text: string;
+  type: "button" | "submit";
 };
 
-function DefaultButton({ text }: Props) {
+function DefaultButton({ text, type }: Props) {
   return (
     <Box
       as="button"
@@ -18,6 +19,7 @@ function DefaultButton({ text }: Props) {
       borderRadius=".4rem"
       fontSize={[".8rem", "1,05rem", "1.15rem", "1.2rem"]}
       fontWeight="bold"
+      type={type}
     >
       {text}
     </Box>
