@@ -2,19 +2,24 @@ import React from "react";
 import BgWrapper from "../../components/BgWrapper";
 import ContentWrapper from "../../components/ContentWrapper";
 import SectionHeading from "../../components/SectionHeading";
-import { FormLabel, Stack, Textarea, useColorModeValue } from "@chakra-ui/react";
+import {
+  FormLabel,
+  Stack,
+  Textarea,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import FormInput from "../../components/FormInput";
 import CustomButton from "../../components/CustomButton";
 
 type Props = {};
 
 function ContactForm({}: Props) {
-
   return (
     <BgWrapper>
       <ContentWrapper>
         <SectionHeading text="contact me" />
         <Stack
+          id="contact"
           bg={useColorModeValue("#FAFBFB", "#141414")}
           p="3rem"
           height="3xl"
