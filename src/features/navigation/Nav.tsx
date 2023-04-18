@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import Navbar from "./Navbar";
 import NavList from "./NavList";
 import Logo from "../../components/logos/Logo";
@@ -52,10 +52,22 @@ function Nav({}: Props) {
                 </Button>
                 <Center>
                   <Stack gap={5} mt={20}>
-                    <NavButton link={"home"} text={"Home"} />
-                    <NavButton link={"about"} text={"About Me"} />
-                    <NavButton link={"work"} text={"My Work"} />
-                    <NavButton link={"contact"} text={"Contact"} />
+                    <NavButton link={"home"} text={"Home"} onClose={onClose} />
+                    <NavButton
+                      link={"about"}
+                      text={"About Me"}
+                      onClose={onClose}
+                    />
+                    <NavButton
+                      link={"work"}
+                      text={"My Work"}
+                      onClose={onClose}
+                    />
+                    <NavButton
+                      link={"contact"}
+                      text={"Contact"}
+                      onClose={onClose}
+                    />
                     <ThemeToggler />
                   </Stack>
                 </Center>
