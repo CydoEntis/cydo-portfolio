@@ -70,21 +70,23 @@ function ContactForm() {
             position: "top",
             duration: 1500,
             status: "error",
-            title: error.text
+            title: error.text,
           });
         }
       );
   };
 
   return (
-    <BgWrapper>
-      <ContentWrapper>
+    <BgWrapper id="contact">
+      <Box minHeight="100vh" py={[20, 20, 56, 56]} px={[2, 2, 10, 10]}>
+        <ContentWrapper>
         <SectionHeading text="contact me" />
         <Stack
+          width="100%"
           as="form"
           id="contact"
           bg={useColorModeValue("#FAFBFB", "#141414")}
-          p="3rem"
+          p={[0, 5, 10, "3rem"]}
           borderRadius=".8rem"
           gap={3}
           onSubmit={handleSubmit(sendEmail)}
@@ -96,7 +98,6 @@ function ContactForm() {
             <Input
               id="name"
               type="text"
-              placeholder="Enter your name"
               h={[12, 12, 12, 16]}
               fontSize={["lg", "xl", "xl", "2xl"]}
               lineHeight={{
@@ -118,7 +119,6 @@ function ContactForm() {
             <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Email</FormLabel>
             <Input
               type="email"
-              placeholder="Enter your email"
               h={[12, 12, 12, 16]}
               fontSize={["lg", "xl", "xl", "2xl"]}
               lineHeight={{
@@ -140,7 +140,6 @@ function ContactForm() {
             <FormLabel fontSize={["lg", "xl", "xl", "2xl"]}>Subject</FormLabel>
             <Input
               type="text"
-              placeholder="Enter your subject"
               h={[12, 12, 12, 16]}
               fontSize={["lg", "xl", "xl", "2xl"]}
               lineHeight={{
@@ -175,7 +174,8 @@ function ContactForm() {
           </FormControl>
           <DefaultButton text="send" type="submit" />
         </Stack>
-      </ContentWrapper>
+        </ContentWrapper>
+      </Box>
     </BgWrapper>
   );
 }

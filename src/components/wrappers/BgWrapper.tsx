@@ -5,17 +5,18 @@ import BgLight from "../../assets/bg-light.svg";
 import { Box, useColorMode } from "@chakra-ui/react";
 
 type Props = {
+  id?: string;
   children: React.ReactNode;
   height?: string;
 };
 
-function BgWrapper({ children, height }: Props) {
+function BgWrapper({ id, children, height }: Props) {
   const { colorMode } = useColorMode();
 
   return (
     <Box
-      id="home"
-      p={10}
+      id={id}
+      p={[0, 0, 10, 10]}
       height={height}
       backgroundImage={colorMode === "light" ? BgLight : BgDark}
       bgSize="contain"

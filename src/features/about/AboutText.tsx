@@ -19,7 +19,7 @@ function AboutText({}: Props) {
         if you are interested in working with me. No project is to big or small
         for me to tackle. 🙂
       </Text>
-      <PageLinkButton text="Contact Me" link="#contact" />
+      <PageLinkButton text="Contact Me" link="contact" />
     </ContentContainer>
   );
 }

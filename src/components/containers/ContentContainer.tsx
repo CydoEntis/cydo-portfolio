@@ -9,7 +9,7 @@ function ContentContainer({ children }: Props) {
   return (
     <Box
       width={{ sm: "100%", md: "100%", lg: "100", xl: "90%", "2xl": "50%" }}
-      p={[5, 5, 5, 10]}
+      p={[0, 5, 5, 10]}
     >
       {children}
     </Box>

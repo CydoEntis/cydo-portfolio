@@ -10,7 +10,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <BgWrapper height={"90vh"}>
+    <BgWrapper height={"95vh"} id="home">
       <Flex
         flexDirection="column"
         justifyContent="center"
@@ -21,8 +21,8 @@ function Hero({}: Props) {
         <HeroImage />
         <HeroText />
         <Stack p={5} gap="1rem" direction="row">
-          <PageLinkButton text="My Work" link="#work"/>
-          <PageLinkButton text="Contact" link="#contact"/>
+          <PageLinkButton text="My Work" link="work" />
+          <PageLinkButton text="Contact" link="contact" />
         </Stack>
       </Flex>
     </BgWrapper>

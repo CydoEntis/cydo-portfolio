@@ -12,10 +12,10 @@ function Nav({}: Props) {
     <Navbar>
       <Logo text={"Cody Stine"} />
       <NavList>
-        <NavButton link={"#home"} text={"Home"} />
-        <NavButton link={"#about"} text={"About Me"} />
-        <NavButton link={"#work"} text={"My Work"} />
-        <NavButton link={"#contact"} text={"Contact"} />
+        <NavButton link={"home"} text={"Home"} />
+        <NavButton link={"about"} text={"About Me"} />
+        <NavButton link={"work"} text={"My Work"} />
+        <NavButton link={"contact"} text={"Contact"} />
         <ThemeToggler />
       </NavList>
     </Navbar>

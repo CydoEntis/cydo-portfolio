@@ -1,4 +1,4 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import Tools from "./Tools";
 import AboutText from "./AboutText";
@@ -10,11 +10,15 @@ type Props = {};
 
 function AboutMe({}: Props) {
   return (
-    <Box
+    <Flex
       id="about"
-      minHeight="70vh"
       w="100%"
       bg={useColorModeValue("#FAFBFB", "#141414")}
+      justifyContent="center"
+      alignItems="center"
+      minHeight="100vh"
+      py={56}
+      px={[2, 2, 10, 10]}
     >
       <ContentWrapper>
         <SectionHeading text="about me" />
@@ -23,7 +27,7 @@ function AboutMe({}: Props) {
           <Tools />
         </FlexWrapper>
       </ContentWrapper>
-    </Box>
+    </Flex>
   );
 }
 

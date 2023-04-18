@@ -42,7 +42,7 @@ type Props = {};
 
 function WorkList({}: Props) {
   return (
-    <Box>
+    <>
       {works.map((work) => (
         <Work
           key={work.id}
@@ -51,7 +51,7 @@ function WorkList({}: Props) {
           imageUrl={work.imageUrl}
         />
       ))}
-    </Box>
+    </>
   );
 }
 

@@ -8,7 +8,12 @@ type Props = {};
 
 function Works({}: Props) {
   return (
-    <Box id="work">
+    <Box
+      minHeight="100vh"
+      py={[20, 20, 56, 56]}
+      px={[0, 0, 10, 10, 10]}
+      id="work"
+    >
       <ContentWrapper>
         <SectionHeading text="my work" />
         <WorkList />

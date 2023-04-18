@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Button, Link } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { Link } from "react-scroll";
 type Props = {
   link: string;
   text: string;
@@ -7,7 +8,7 @@ type Props = {
 
 function PageLinkButton({ link, text }: Props) {
   return (
-    <Link href={link} textDecoration="none" _hover={{ textDecoration: "none" }}>
+    <Link to={link} spy={true} smooth={true}  duration={500}>
       <Box
         as="button"
         textTransform="uppercase"

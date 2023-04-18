@@ -1,4 +1,5 @@
-import { Button, Link } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+import { Link } from "react-scroll";
 import React from "react";
 
 type Props = {
@@ -8,13 +9,16 @@ type Props = {
 
 function NavButton({ link, text }: Props) {
   return (
-    <Link
-      textDecoration="none"
-      _hover={{ textDecoration: "none" }}
-      href={link}
-    >
+    <Link to={link} spy={true} smooth={true} offset={100} duration={500}>
       <Button>{text}</Button>
     </Link>
+    // <Link
+    //   textDecoration="none"
+    //   _hover={{ textDecoration: "none" }}
+    //   href={link}
+    // >
+    //
+    // </Link>
   );
 }
 

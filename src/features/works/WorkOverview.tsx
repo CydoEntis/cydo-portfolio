@@ -13,7 +13,7 @@ function WorkOverview({ title, description }: Props) {
   return (
     <ContentContainer>
       <Subheading text={title} />
-      <Text fontSize="2xl" py={5} variant={{ base: "base" }}>
+      <Text fontSize={["lg", "xl", "xl", "2xl"]} py={5}>
         {description}
       </Text>
       <PageLinkButton text="Learn More" link="#contact" />

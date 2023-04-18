@@ -5,10 +5,10 @@ type Props = {
   text: string;
 };
 
-function SectionHeading({ text }: Props) {
+function SectionHeading({  text }: Props) {
   return (
     <Flex
-      pt="5rem"
+      pb={20}
       direction="column"
       justifyContent="center"
       alignItems="center"
