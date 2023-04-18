@@ -14,6 +14,7 @@ function Navbar({children}: Props) {
       position="fixed"
       w="100%"
       zIndex="99"
+      borderBottom="1px solid #B7FD00"
     >
       <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
         {children}
