@@ -8,7 +8,7 @@ function HeroImage({}: Props) {
       <Image
         borderRadius="100%"
         src={ProfilePic}
-        maxWidth="250px"
+        width={{ sm: "175px", md: "200px", lg: "250px", xl: "250px", "2xl": "350px" }}
         marginBottom="2rem"
         margin="0 auto"
       />

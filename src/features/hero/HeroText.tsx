@@ -8,7 +8,7 @@ function HeroText({}: Props) {
     <>
       <Heading
         p={[2, 5, 8, 10]}
-        size={["2xl", "2xl", "2xl", "3xl"]}
+        size={{ sm: "xl", md: "2xl", lg: "2xl", xl: "3xl", "2xl": "3xl" }}
         textTransform="uppercase"
         textAlign="center"
         variant={{ base: "base" }}
@@ -17,14 +17,14 @@ function HeroText({}: Props) {
       </Heading>
       <Text
         textAlign="center"
-        fontSize={["lg", "xl", "xl", "2xl"]}
+        fontSize={{ sm: "lg", md: "lg", lg: "xl", xl: "2xl", "2xl": "3xl" }}
         variant={{ base: "base" }}
       >
         A Fullstack developer focused on bringing ideas to life.
       </Text>
       <Text
         textAlign="center"
-        fontSize={["lg", "xl", "xl", "2xl"]}
+        fontSize={{ sm: "lg", md: "lg", lg: "xl", xl: "2xl", "2xl": "3xl" }}
         variant={{ base: "base" }}
       >
         No project is too big or small.

@@ -10,7 +10,7 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <BgWrapper height={"95vh"} id="home">
+    <BgWrapper height={"100vh"} id="home">
       <Flex
         flexDirection="column"
         justifyContent="center"
