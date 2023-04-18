@@ -17,6 +17,7 @@ function Hero({}: Props) {
         alignItems="center"
         h="100%"
         w="100%"
+        py={56}
       >
         <HeroImage />
         <HeroText />
