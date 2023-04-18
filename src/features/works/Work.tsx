@@ -9,14 +9,30 @@ type Props = {
   imageUrl: string;
   title: string;
   description: string;
+  liveLink: string;
+  frontendLink: string;
+  backendLink: string;
 };
 
-function Work({ imageUrl, title, description }: Props) {
+function Work({
+  liveLink,
+  frontendLink,
+  backendLink,
+  imageUrl,
+  title,
+  description,
+}: Props) {
   return (
     <ContentWrapper>
-      <FlexWrapper>
+      <FlexWrapper >
         <WorkImage imageUrl={imageUrl} />
-        <WorkOverview title={title} description={description} />
+        <WorkOverview
+          liveLink={liveLink}
+          frontendLink={frontendLink}
+          backendLink={backendLink}
+          title={title}
+          description={description}
+        />
       </FlexWrapper>
     </ContentWrapper>
   );

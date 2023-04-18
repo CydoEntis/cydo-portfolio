@@ -52,6 +52,9 @@ function WorkList({}: Props) {
           title={work.title}
           description={work.description}
           imageUrl={work.imageUrl}
+          liveLink={work.liveLink}
+          frontendLink={work.frontendLink}
+          backendLink={work.backendLink}
         />
       ))}
     </>

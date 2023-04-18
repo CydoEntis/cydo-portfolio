@@ -10,7 +10,7 @@ function ContentWrapper({ id, children }: Props) {
   return (
     <Box
       margin="0 auto"
-      width={{ sm: "100%", md: "100%", lg: "100", xl: "90%", "2xl": "75%" }}
+      width={{ sm: "100%", md: "100%", lg: "100", xl: "90%", "2xl": "85%", "3xl": "75%"}}
       id={id}
     >
       {children}

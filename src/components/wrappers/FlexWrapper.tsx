@@ -10,7 +10,7 @@ function FlexWrapper({ children }: Props) {
     <Flex
       w="100%"
       justifyContent="center"
-      direction={{ base: "column", md: "row",  }}
+      direction={{ base: "column", "2xl": "row",  }}
     >
       {children}
     </Flex>
