@@ -18,7 +18,7 @@ function LinkButton({ link, icon, text }: Props) {
       color="#333"
       bg="#B7FD00"
       _hover={{ bg: "#abd43f" }}
-      w={["120px", "125px", "150px", "175px"]}
+      w={["150px", "175px"]}
       py={[3, 3, 3, 4]}
       px={2}
       borderRadius=".4rem"

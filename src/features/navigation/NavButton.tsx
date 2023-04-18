@@ -10,7 +10,7 @@ type Props = {
 function NavButton({ link, text }: Props) {
   return (
     <Link to={link} spy={true} smooth={true} offset={100} duration={500}>
-      <Button>{text}</Button>
+      <Button w="100px">{text}</Button>
     </Link>
     // <Link
     //   textDecoration="none"

@@ -4,6 +4,7 @@ import WorkImage from "./WorkImage";
 import WorkOverview from "./WorkOverview";
 import ContentWrapper from "../../components/wrappers/ContentWrapper";
 import FlexWrapper from "../../components/wrappers/FlexWrapper";
+import { Tool } from "./WorkList";
 
 type Props = {
   imageUrl: string;
@@ -12,6 +13,7 @@ type Props = {
   liveLink: string;
   frontendLink: string;
   backendLink: string;
+  tools: Tool[];
 };
 
 function Work({
@@ -21,10 +23,11 @@ function Work({
   imageUrl,
   title,
   description,
+  tools,
 }: Props) {
   return (
     <ContentWrapper>
-      <FlexWrapper >
+      <FlexWrapper>
         <WorkImage imageUrl={imageUrl} />
         <WorkOverview
           liveLink={liveLink}
@@ -32,6 +35,7 @@ function Work({
           backendLink={backendLink}
           title={title}
           description={description}
+          tools={tools}
         />
       </FlexWrapper>
     </ContentWrapper>

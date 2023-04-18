@@ -1,10 +1,12 @@
-import { Box, Button, HStack, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Heading, Text, Wrap } from "@chakra-ui/react";
 import React from "react";
 import ContentContainer from "../../components/containers/ContentContainer";
 import Subheading from "../../components/headings/Subheading";
 import LinkButton from "../../components/buttons/LinkButton";
 import { BsGlobe } from "react-icons/bs";
 import { FaGithubAlt } from "react-icons/fa";
+import BuiltWith from "./BuiltWith";
+import { Tool } from "./WorkList";
 
 type Props = {
   title: string;
@@ -12,6 +14,7 @@ type Props = {
   liveLink?: string;
   frontendLink?: string;
   backendLink?: string;
+  tools: Tool[];
 };
 
 function WorkOverview({
@@ -20,6 +23,7 @@ function WorkOverview({
   backendLink,
   title,
   description,
+  tools,
 }: Props) {
   return (
     <ContentContainer>
@@ -27,8 +31,8 @@ function WorkOverview({
       <Text fontSize={["lg", "xl", "xl", "2xl"]} py={5}>
         {description}
       </Text>
-
-      <HStack gap={3}>
+      <BuiltWith tools={tools} />
+      <Wrap gap={3}>
         <LinkButton
           link={liveLink!}
           text="Live Site"
@@ -41,10 +45,10 @@ function WorkOverview({
         />
         <LinkButton
           link={backendLink!}
-          text="Backend "
+          text="Backend"
           icon={<FaGithubAlt fontSize={20} />}
         />
-      </HStack>
+      </Wrap>
     </ContentContainer>
   );
 }
