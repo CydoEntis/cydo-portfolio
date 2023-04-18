@@ -6,49 +6,49 @@ import Blueprint from "../../assets/Blueprint.png";
 import AmiiboParty from "../../assets/Amiibo-Party.png";
 
 const works = [
-  {
-    id: 1,
-    title: "Build Buddy",
-    description:
-      "Build Buddy is an Age of Empires 4 build order website that allows users to easily search for, create and rate different build orders.",
-    imageUrl:
-      "https://www.ageofempires.com/wp-content/uploads/2021/08/AoE4_KeyArt_1920x1080.jpg",
-    liveLink: "",
-    frontendLink:
-      "https://github.com/CydoEntis/age-of-empires-build-orders-client",
-    backendLink:
-      "https://github.com/CydoEntis/age-of-empires-4-build-orders-api",
-    tools: [
-      {
-        id: 1,
-        name: "TypeScript",
-      },
-      {
-        id: 2,
-        name: "Material UI",
-      },
-      {
-        id: 3,
-        name: "React",
-      },
-      {
-        id: 4,
-        name: "Redux",
-      },
-      {
-        id: 5,
-        name: "Java",
-      },
-      {
-        id: 6,
-        name: "Spring Boot",
-      },
-      {
-        id: 7,
-        name: "MySql",
-      },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "Build Buddy",
+  //   description:
+  //     "Build Buddy is an Age of Empires 4 build order website that allows users to easily search for, create and rate different build orders.",
+  //   imageUrl:
+  //     "https://www.ageofempires.com/wp-content/uploads/2021/08/AoE4_KeyArt_1920x1080.jpg",
+  //   liveLink: "",
+  //   frontendLink:
+  //     "https://github.com/CydoEntis/age-of-empires-build-orders-client",
+  //   backendLink:
+  //     "https://github.com/CydoEntis/age-of-empires-4-build-orders-api",
+  //   tools: [
+  //     {
+  //       id: 1,
+  //       name: "TypeScript",
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "Material UI",
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "React",
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "Redux",
+  //     },
+  //     {
+  //       id: 5,
+  //       name: "Java",
+  //     },
+  //     {
+  //       id: 6,
+  //       name: "Spring Boot",
+  //     },
+  //     {
+  //       id: 7,
+  //       name: "MySql",
+  //     },
+  //   ],
+  // },
   {
     id: 2,
     title: "Blueprint",
